@@ -5,7 +5,7 @@ public class Articulo {
 	private int id;
 	private String nombre;
 	private double precio;
-	
+	// estatica para la creacion de ids
 	static int contador = 0;
 	
 	public Articulo(String nombreParametro, double precioParametro) {
