@@ -19,7 +19,7 @@ public class Main {
 	        System.out.println("3 - Buscar/Modificar artículo");
 	        System.out.println("4 - Eliminar artículo");
 	        System.out.println("5 - Salir");
-	        System.out.print("Seleccione una opción: ");
+	        System.out.print("\n Seleccione una opción: \n\n");
 
 	        String entrada = sc.nextLine();
 
@@ -92,7 +92,7 @@ public class Main {
 	
 	public static void eliminarArticulo() {
 		System.out.println("ID del articulo a eliminar: ");
-		int id = sc.nextInt();
+		long id = sc.nextLong();
 		if(listaArticulos.removeIf(a -> a.getId() == id)) {
 		System.out.println("Articulo eliminado correctamente!");
 		}else {
@@ -130,11 +130,11 @@ public class Main {
 	    // si elige por ID busca el articulo por id
 	    if (opcionBusqueda == 1) {
 	        System.out.print("Ingrese ID del artículo: ");
-	        int id;
+	        long id;
 	        while (true) {
 	        	// valido que sea un numero
 	            try {
-	                id = Integer.parseInt(sc.nextLine());
+	                id = Long.parseLong(sc.nextLine());
 	                break;
 	            } catch (NumberFormatException e) {
 	                System.out.print("Por favor ingrese un número: ");
